@@ -74,4 +74,4 @@ The optimized production output will be generated in the `dist/` directory.
 
 - **LinkedIn**: [linkedin.com/in/meisyacantika](https://www.linkedin.com/in/meisyacantika)
 - **GitHub**: [github.com/meisyacantika](https://github.com/meisyacantika)
-- **Email**: [meisyacantika@gmail.com](mailto:meisyacantika@gmail.com)
+- **Email**: [meisyacantikaputri@gmail.com](mailto:meisyacantikaputri@gmail.com)
