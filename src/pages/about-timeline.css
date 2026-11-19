@@ -1,0 +1,348 @@
+.timeline-page {
+  max-width: 950px;
+}
+
+.app-shell .brand-mark > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.timeline-section {
+  margin-top: 8px;
+}
+
+.timeline-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px 15px;
+  border-bottom: 1px solid rgba(144, 163, 174, 0.14);
+  color: #687780;
+  font: 8px var(--app-font-mono);
+  letter-spacing: 0.13em;
+}
+
+.timeline-heading-label {
+  color: #a4b6b0;
+}
+
+.timeline-heading-range {
+  color: #63717a;
+}
+
+.timeline-list {
+  --timeline-center: 50%;
+  position: relative;
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 28px;
+  left: var(--timeline-center);
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(121, 228, 189, 0.05),
+    rgba(121, 228, 189, 0.34) 10%,
+    rgba(121, 228, 189, 0.22) 82%,
+    rgba(121, 228, 189, 0.04)
+  );
+}
+
+.timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  align-items: center;
+  min-height: 188px;
+  padding: 24px 0;
+}
+
+.timeline-entry--education {
+  min-height: 194px;
+}
+
+.timeline-node {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(121, 228, 189, 0.38);
+  border-radius: 9px;
+  color: #79e4bd;
+  background: #111922;
+  box-shadow: 0 0 0 6px rgba(14, 18, 27, 0.9);
+}
+
+.timeline-node svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.6;
+}
+
+.timeline-card {
+  position: relative;
+  z-index: 1;
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+  padding: 21px 22px 20px;
+  border: 1px solid rgba(146, 164, 173, 0.16);
+  border-radius: 9px;
+  background:
+    linear-gradient(135deg, rgba(25, 33, 42, 0.97), rgba(16, 22, 30, 0.97));
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+  animation: timeline-arrive 0.55s both;
+}
+
+.timeline-entry--education .timeline-card,
+.timeline-entry--learning .timeline-card {
+  grid-column: 1;
+  justify-self: end;
+  animation-delay: 0.08s;
+}
+
+.timeline-entry--projects .timeline-card {
+  grid-column: 3;
+  animation-delay: 0.18s;
+}
+
+.timeline-card-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #789087;
+  font: 8px var(--app-font-mono);
+  letter-spacing: 0.12em;
+}
+
+.timeline-card-kicker span:first-child {
+  color: #79e4bd;
+}
+
+.timeline-card-title {
+  margin: 0;
+  color: #e0e9e5;
+  font-size: clamp(15px, 1.7vw, 19px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+}
+
+.timeline-university {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0;
+  color: #9be9ca;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(121, 228, 189, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-university:hover {
+  color: #d2ffec;
+  border-color: #79e4bd;
+}
+
+.timeline-university svg {
+  width: 12px;
+  height: 12px;
+  flex: none;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  color: #83918f;
+  font: 9px var(--app-font-mono);
+}
+
+.timeline-meta-divider {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #79e4bd;
+  opacity: 0.75;
+}
+
+.timeline-card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.22s ease, background-color 0.22s ease, transform 0.22s ease;
+}
+
+.timeline-card--link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(121, 228, 189, 0.42);
+  background:
+    linear-gradient(135deg, rgba(27, 42, 43, 0.98), rgba(16, 24, 30, 0.98));
+}
+
+.timeline-card--link:focus-visible,
+.timeline-university:focus-visible {
+  outline: 2px solid #79e4bd;
+  outline-offset: 4px;
+}
+
+.timeline-link-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.timeline-link-heading > svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  color: #79e4bd;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.timeline-card--link:hover .timeline-link-heading > svg {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+.timeline-description {
+  margin: 10px 0 0;
+  color: #98a5a5;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.timeline-link-note {
+  display: inline-block;
+  margin-top: 17px;
+  color: #72827f;
+  font: 7px var(--app-font-mono);
+  letter-spacing: 0.11em;
+}
+
+@keyframes timeline-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline-entry {
+    grid-template-columns: minmax(0, 1fr) 62px minmax(0, 1fr);
+    min-height: 178px;
+  }
+
+  .timeline-card {
+    padding: 19px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-page {
+    padding-top: 58px;
+  }
+
+  .timeline-heading {
+    padding-bottom: 12px;
+  }
+
+  .timeline-list {
+    padding-left: 0;
+  }
+
+  .timeline-list::before {
+    left: 17px;
+    bottom: 22px;
+  }
+
+  .timeline-entry,
+  .timeline-entry--education {
+    grid-template-columns: 35px minmax(0, 1fr);
+    align-items: start;
+    min-height: 0;
+    padding: 18px 0 8px;
+  }
+
+  .timeline-node {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .timeline-entry--education .timeline-card,
+  .timeline-entry--projects .timeline-card,
+  .timeline-entry--learning .timeline-card {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: stretch;
+    margin-left: 12px;
+  }
+
+  .timeline-card {
+    padding: 17px 16px 16px;
+  }
+
+  .timeline-card-kicker {
+    margin-bottom: 11px;
+    font-size: 7px;
+  }
+
+  .timeline-card-title {
+    font-size: 15px;
+  }
+
+  .timeline-university {
+    font-size: 14px;
+  }
+
+  .timeline-description {
+    font-size: 10px;
+  }
+
+  .timeline-link-note {
+    margin-top: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-card {
+    animation: none;
+  }
+
+  .timeline-card--link,
+  .timeline-link-heading > svg,
+  .timeline-university {
+    transition: none;
+  }
+}
