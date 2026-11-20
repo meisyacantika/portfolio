@@ -39,8 +39,8 @@ export const contactLinks = [
   {
     id: 'email',
     label: 'Email',
-    value: 'meisyacantika@gmail.com',
-    href: 'mailto:meisyacantika@gmail.com',
+    value: 'meisyacantikaputri@gmail.com',
+    href: 'mailto:meisyacantikaputri@gmail.com',
     kind: 'email',
   },
 ] as const;
